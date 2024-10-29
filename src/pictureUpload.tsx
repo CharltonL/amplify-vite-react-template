@@ -1,20 +1,23 @@
-import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
-import { DynamoDBDocumentClient, PutCommand } from "@aws-sdk/lib-dynamodb";
+import { post } from 'aws-amplify/api';
 
-const client = new DynamoDBClient({ region: "us-east-1" });
-const docClient = DynamoDBDocumentClient.from(client);
-
-export const addItemToDynamoDB = async (item: {id: String, pictureStream: String}) => {
-  const params = {
-    TableName: "dynamo123trigger",
-    Item: item
-  };
-
+async function postTodo(input:{id:string, pictureStream: string}) {
   try {
-    const command = new PutCommand(params);
-    await docClient.send(command);
-    console.log("Item added successfully");
-  } catch (error) {
-    console.error("Error adding item:", error);
+    const restOperation = post({
+      apiName: 'pictureUploaderAPI',
+      path: '/picture',
+      options: {
+        body: input
+      }
+    });
+
+    const { body } = await restOperation.response;
+    const response = await body.json();
+
+    console.log('POST call succeeded');
+    console.log(response);
+  } catch (e: any) {
+    console.log('POST call failed: ', JSON.parse(e.response.body));
   }
-};
+}
+
+export default postTodo

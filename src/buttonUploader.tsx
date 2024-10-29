@@ -1,4 +1,4 @@
-import { addItemToDynamoDB } from "./pictureUpload";
+import  postTodo  from "./pictureUpload";
 
 function MyComponent() {
     const handleAddItem = async () => {
@@ -7,7 +7,7 @@ function MyComponent() {
         pictureStream: "https://example.com/image.jpg"
       };
   
-      await addItemToDynamoDB(newItem);
+      await postTodo(newItem);
     };
   
     return (
