@@ -1,0 +1,29 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-testinglambdas-dev-30ec6-authRole",
+      "UnauthRoleArn": "arn:aws:iam::985539801549:role/amplify-testinglambdas-dev-30ec6-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::985539801549:role/amplify-testinglambdas-dev-30ec6-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-testinglambdas-dev-30ec6-deployment",
+      "UnauthRoleName": "amplify-testinglambdas-dev-30ec6-unauthRole",
+      "StackName": "amplify-testinglambdas-dev-30ec6",
+      "StackId": "arn:aws:cloudformation:us-east-1:985539801549:stack/amplify-testinglambdas-dev-30ec6/4f1e77b0-9633-11ef-83fb-12d8b47bbdd1",
+      "AmplifyAppId": "d1ewq1xkobcfux"
+    },
+    "categories": {
+      "function": {
+        "dynamo123triggerTriggerb9c3fa7c": {
+          "deploymentBucketName": "amplify-testinglambdas-dev-30ec6-deployment",
+          "s3Key": "amplify-builds/dynamo123triggerTriggerb9c3fa7c-776c69326f714b676d56-build.zip"
+        }
+      },
+      "storage": {
+        "dynamo123trigger": {}
+      },
+      "api": {
+        "pictureUploaderAPI": {}
+      }
+    }
+  }
+}

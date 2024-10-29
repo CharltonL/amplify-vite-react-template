@@ -1,0 +1,60 @@
+{
+  "api": {
+    "pictureUploaderAPI": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "dynamo123triggerTriggerb9c3fa7c"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "dynamo123triggerTriggerb9c3fa7c": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ],
+          "category": "storage",
+          "resourceName": "dynamo123trigger"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_dynamo123triggerTriggerb9c3fa7c_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "dynamo123triggerTriggerb9c3fa7c"
+        }
+      ]
+    },
+    "AMPLIFY_function_dynamo123triggerTriggerb9c3fa7c_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "dynamo123triggerTriggerb9c3fa7c"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "dynamo123trigger": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/picture": {
+      "name": "/picture",
+      "lambdaFunction": "dynamo123triggerTriggerb9c3fa7c",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

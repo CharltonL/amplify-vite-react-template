@@ -1,0 +1,12 @@
+{
+  "resourceName": "dynamo123trigger",
+  "tableName": "dynamo123trigger",
+  "partitionKey": {
+    "fieldName": "id",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": [
+    "dynamo123triggerTriggerb9c3fa7c"
+  ]
+}
